@@ -1,18 +1,30 @@
 package com.universe.math;
 
+import java.util.List;
+
 public class Util {
 	
-	public static void printPoint(double[] point) {
-		for(double coord : point) 
-			System.out.print(coord + "\t");
-		System.out.println();
+	public static void printCoordinates(List<double[]> coordinates) {
+		char a = 'A';
+		for(double[] coordinate : coordinates) {
+			System.out.println(a++ + "=\t"+  printCoordinate(coordinate));
+		}
 	}
 	
-	public static double[] copyArray(double[] array) {
-		double[] copy = new double[array.length];
-		for(int i=0;i<array.length;i++)
-			copy[i] = array[i];
-		return copy;
+	public static String printCoordinate(double[] coordinate) {
+		String output = "(";
+		for(double x : coordinate) {
+			output += x + ",";
+		}
+		return output.replaceAll(",$", ")");
 	}
-
+	
+	public static double[] cloneCoordinate(double[] coordinate) {
+		double[] newCoordinate = new double[coordinate.length];
+		for(int i=0;i<coordinate.length;i++) {
+			newCoordinate[i] = coordinate[i];
+		}
+		return newCoordinate;
+	}
+	
 }
