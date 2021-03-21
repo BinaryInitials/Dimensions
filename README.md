@@ -4,7 +4,7 @@ Tool that calculates Euclidian coordinates of a n-equidistant system in a n-1 di
 
 Examples: 
 
-For n=1:
+For `dimension=1`:
 <br>`java -jar runnable.jar 1`
 <br>yields the following output:
 ```
@@ -14,7 +14,7 @@ B=	(1.0)
 ```
 This essentially means that in a 1 dimensional universe normalized with a radius of 1, the coordinates of the 2-point system are (0), and (1). Or in other words: 2 points in a line.
 
-For n=2:
+For `dimension=2`:
 <br>`java -jar runnable.jar 2`
 <br>yields the following output:
 ```
@@ -25,7 +25,7 @@ C=	(0.5,0.8660254037844386)
 ```
 This essentially means that in a 2 dimensional universe normalized with a radius of 1, the coordinates of the 3-point system are `(0,0)`, `(1,0)`, and `(1/2, sqrt(3)/2)`. Or in other words: 3 points in an equilateral triangle.
 
-For n=3:
+For `dimension=3`:
 <br>`java -jar runnable.jar 3`
 <br>yields the following output:
 ```
